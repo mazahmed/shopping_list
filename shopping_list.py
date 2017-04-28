@@ -41,7 +41,7 @@ def remove_shopping_list(lists_by_name, list_name_to_remove):
     """
 
     # your code here! 
-    pass
+    del lists_by_name[list_name_to_remove]
 
 
 def add_to_shopping_list(lists_by_name, list_name, items):
@@ -54,7 +54,7 @@ def add_to_shopping_list(lists_by_name, list_name, items):
     Returns:
       None
     """
-
+    lists_by_name[list_name] = lists_by_name[list_name] + items
     # your code here! 
 
 
@@ -73,7 +73,13 @@ def remove_from_shopping_list(lists_by_name, list_name, items):
     """
 
     # your code here!
-    pass
+    #lists_by_name[list_name.remove(items)]
+    items in lists_by_name.values()
+    if True:
+        del lists_by_name[list_name(items)]
+    else:
+        print "That item doesn't exist in any of the lists"
+
 
 
 def display_shopping_list(lists_by_name, list_name):
