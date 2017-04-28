@@ -20,9 +20,11 @@ def add_new_shopping_list(lists_by_name, new_list_name):
     Returns:
       None
     """
-
+    
     # your code here! 
-    pass
+    #pass 
+    lists_by_name[new_list_name]=[]
+    
 
 
 def remove_shopping_list(lists_by_name, list_name_to_remove):
@@ -54,7 +56,6 @@ def add_to_shopping_list(lists_by_name, list_name, items):
     """
 
     # your code here! 
-    pass
 
 
 def remove_from_shopping_list(lists_by_name, list_name, items):
@@ -71,7 +72,7 @@ def remove_from_shopping_list(lists_by_name, list_name, items):
       None
     """
 
-    # your code here! 
+    # your code here!
     pass
 
 
@@ -88,8 +89,23 @@ def display_shopping_list(lists_by_name, list_name):
       None
     """
 
-    # your code here! 
-    pass
+    if list_name in lists_by_name.keys():
+        print lists_by_name[list_name]
+    else:    
+        print "No such list"
+
+    #    There is no list with name " + list_name
+    #else:
+        # your code here! 
+    
+    #for store in lists_by_name.keys():
+    #    if list_name in store:
+    #        print list_name + ": " + lists_by_name[list_name]
+    #        break
+    #    else:
+    #        print "There is no list by " + list_name
+
+
 
 
 def show_all_lists(lists_by_name):
@@ -102,7 +118,8 @@ def show_all_lists(lists_by_name):
     """
 
     # your code here! 
-    pass
+    for key,value in lists_by_name.items():
+        print key,value        
 
 
 def parse_string_of_items(items_string):
